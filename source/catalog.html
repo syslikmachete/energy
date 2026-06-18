@@ -4,26 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/styles.css">
   <title>Cat Energy - Каталог</title>
 </head>
 
 <body>
   <header class="header">
-    <!-- <a href="index.html" class="header__logo">
-      <img class="header__logo-image" src="" alt="Логотип компании Cat Energy">
-      <img class="header__logo-image-text" src="" alt="">
+    <!-- <a href="index.html" class="header__logo logo">
+      <img class="logo__image logo__image-icon" src="" alt="Логотип компании Cat Energy">
+      <img class="logo__image logo__image-text" src="" alt="">
     </a> -->
     <nav class="navigation">
-      <button type="button" class="navigation__button navigation__button--close"></button>
+      <button class="navigation__button navigation__button--close" type="button"></button>
       <ul class="navigation__list">
         <li class="navigation__item">
-          <a href="index.html" class="navigation__link navigation__link--current">Главная</a>
+          <a class="navigation__link navigation__link--current" href="index.html">Главная</a>
         </li>
         <li class="navigation__item">
-          <a href="catalog.html" class="navigation__link">Каталог продукции</a>
+          <a class="navigation__link" href="catalog.html">Каталог продукции</a>
         </li>
         <li class="navigation__item">
-          <a href="#" class="navigation__link">Подбор программы</a>
+          <a class="navigation__link" href="#">Подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -50,7 +51,7 @@
               <span class="catalog-card__value">700 ₽</span>
             </div>
           </div>
-          <button type="button" class="button catalog-card__button">Заказать</button>
+          <button class="button catalog-card__button" type="button">Заказать</button>
         </li>
 
         <li class="catalog__item catalog-card">
@@ -70,7 +71,7 @@
               <span class="catalog-card__value">1000 ₽</span>
             </div>
           </div>
-          <button type="button" class="button catalog-card__button">Заказать</button>
+          <button class="button catalog-card__button" type="button">Заказать</button>
         </li>
 
         <li class="catalog__item catalog-card">
@@ -90,7 +91,7 @@
               <span class="catalog-card__value">700 ₽</span>
             </div>
           </div>
-          <button type="button" class="button catalog-card__button">Заказать</button>
+          <button class="button catalog-card__button" type="button">Заказать</button>
         </li>
 
         <li class="catalog__item catalog-card">
@@ -110,7 +111,7 @@
               <span class="catalog-card__value">1000 ₽</span>
             </div>
           </div>
-          <button type="button" class="button catalog-card__button">Заказать</button>
+          <button class="button catalog-card__button" type="button">Заказать</button>
         </li>
 
         <li class="catalog__item catalog-card">
@@ -130,7 +131,7 @@
               <span class="catalog-card__value">400 ₽</span>
             </div>
           </div>
-          <button type="button" class="button catalog-card__button">Заказать</button>
+          <button class="button catalog-card__button" type="button">Заказать</button>
         </li>
 
         <li class="catalog__item catalog-card">
@@ -150,7 +151,7 @@
               <span class="catalog-card__value">700 ₽</span>
             </div>
           </div>
-          <button type="button" class="button catalog-card__button">Заказать</button>
+          <button class="button catalog-card__button" type="button">Заказать</button>
         </li>
 
         <li class="catalog__item catalog-card">
@@ -170,13 +171,13 @@
               <span class="catalog-card__value">500 ₽</span>
             </div>
           </div>
-          <button type="button" class="button catalog-card__button">Заказать</button>
+          <button class="button catalog-card__button" type="button">Заказать</button>
         </li>
 
         <li class="catalog__item catalog-card-more">
           <h2 class="catalog-card-more__title">Показать еще 100500 товаров</h2>
           <p class="catalog-card-more__description">На самом деле вкусов гораздо больше!</p>
-          <a href="#" class="button catalog-card-more__link">Показать все</a>
+          <a class="button catalog-card-more__link" href="#">Показать все</a>
         </li>
       </ul>
     </section>
@@ -192,7 +193,7 @@
               <span class="additional-card__value">200 ₽</span>
             </div>
           </div>
-          <button type="button" class="button additional-card__button">Заказать</button>
+          <button class="button additional-card__button" type="button">Заказать</button>
         </li>
 
         <li class="additional__item additional-card">
@@ -203,7 +204,7 @@
               <span class="additional-card__value">50 ₽</span>
             </div>
           </div>
-          <button type="button" class="button additional-card__button">Заказать</button>
+          <button class="button additional-card__button" type="button">Заказать</button>
         </li>
 
         <li class="additional__item additional-card">
@@ -214,7 +215,7 @@
               <span class="additional-card__value">100 ₽</span>
             </div>
           </div>
-          <button type="button" class="button additional-card__button">Заказать</button>
+          <button class="button additional-card__button" type="button">Заказать</button>
         </li>
 
         <li class="additional__item additional-card">
@@ -225,11 +226,11 @@
               <span class="additional-card__value">300 ₽</span>
             </div>
           </div>
-          <button type="button" class="button additional-card__button">Заказать</button>
+          <button class="button additional-card__button" type="button">Заказать</button>
         </li>
 
         <li class="additional__item additional-card-gift promo-gift">
-          <svg class="promo-gift__icon"></svg>
+          <!-- <svg class="promo-gift__icon"></svg> -->
           <p class="promo-gift__description">Закажите все и получите чехол для кота в подарок!</p>
         </li>
       </ul>
@@ -237,12 +238,12 @@
     <section class="subscribe">
       <h2 class="subscribe__title">Акции и новинки</h2>
       <p class="subscribe__description">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
-      <form action="https://echo.htmlacademy.ru" class="subscribe-form" method="post">
+      <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
         <div class="subscribe-form__group">
           <label class="visually-hidden">Электронная почта для рассылки
-            <input type="email" name="email" class="subscribe-form__input" placeholder="kuklachev@gmail.com" required>
+            <input class="subscribe-form__input" type="email" name="email" placeholder="kuklachev@gmail.com" required>
           </label>
-          <button type="submit" class="button subscribe-form__button">Подписаться</button>
+          <button class="button subscribe-form__button" type="submit">Подписаться</button>
         </div>
       </form>
     </section>
@@ -261,12 +262,12 @@
   <footer class="footer">
     <!-- <a href="index.html" class="footer__logo"><img class="footer__logo-image" src="" alt="Логотип"></a> -->
     <div class="social">
-      <a href="https://vk.com/htmlacademy" class="social__link social__link--vk">VK</a>
-      <a href="https://www.youtube.com/channel/@HTMLAcademyTV" class="social__link social__link--yt">YT</a>
-      <a href="https://t.me/s/htmlacademy" class="social__link social__link--tg">TG</a>
+      <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">VK</a>
+      <a class="social__link social__link--yt" href="https://www.youtube.com/channel/@HTMLAcademyTV">YT</a>
+      <a class="social__link social__link--tg" href="https://t.me/s/htmlacademy">TG</a>
     </div>
     <div class="html-academy">
-      <a href="#" class="html-academy__link">
+      <a class="html-academy__link" href="#">
         <span class="html-academy__text">HTML Academy</span>
         <!-- <img class="html-academy__logo" src="" alt="Логотип HTML Academy"> -->
       </a>
