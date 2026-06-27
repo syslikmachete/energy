@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/styles.css">
   <title>Cat Energy - Каталог</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="favicons/icon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/32.png">
+  <link rel="apple-touch-icon" href="favicons/192.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/index.js" defer></script>
 </head>
 
-<body>
+<body class="page__body">
   <header class="header">
     <a class="header__logo logo" href="index.html">
       <img class="logo__image logo__image-icon" src="#" width="1" height="1" alt="Логотип компании Cat Energy">
@@ -35,7 +42,13 @@
 
       <ul class="catalog__list">
         <li class="catalog__item catalog-card">
-          <img class="catalog-card__image" src="#" width="1" height="1" alt="Со вкусом курицы, 500 граммов.">
+          <picture>
+            <source width="161" height="172" type="image/png" media="(min-width: 768px)"
+              srcset="images/catalog/cup-1@1x.png 1x, images/catalog/cup-1@2x.png 2x">
+            <img class="catalog-card__image" src="images/catalog/mobile/cup-1-mobile@1x.png"
+              srcset="images/catalog/mobile/cup-1-mobile@2x.png 2x" width="68" height="86"
+              alt="Со вкусом курицы, 500 граммов.">
+          </picture>
           <h2 class="catalog-card__title">Cat Energy PRO 500 г.</h2>
           <div class="catalog-card__params">
             <div class="catalog-card__row">
@@ -55,7 +68,13 @@
         </li>
 
         <li class="catalog__item catalog-card">
-          <img class="catalog-card__image" src="#" width="1" height="1" alt="Со вкусом курицы, 1000 граммов.">
+          <picture>
+            <source width="168" height="200" type="image/png" media="(min-width: 768px)"
+              srcset="images/catalog/cup-2@1x.png 1x, images/catalog/cup-2@2x.png 2x">
+            <img class="catalog-card__image" src="images/catalog/mobile/cup-2-mobile@1x.png"
+              srcset="images/catalog/mobile/cup-2-mobile@2x.png 2x" width="84" height="100"
+              alt="Со вкусом курицы, 1000 граммов.">
+          </picture>
           <h2 class="catalog-card__title">Cat Energy PRO 1000 г.</h2>
           <div class="catalog-card__params">
             <div class="catalog-card__row">
@@ -75,7 +94,13 @@
         </li>
 
         <li class="catalog__item catalog-card">
-          <img class="catalog-card__image" src="#" width="1" height="1" alt="Со вкусом рыбы, 500 граммов.">
+          <picture>
+            <source width="163" height="174" type="image/png" media="(min-width: 768px)"
+              srcset="images/catalog/cup-3@1x.png 1x, images/catalog/cup-3@2x.png 2x">
+            <img class="catalog-card__image" src="images/catalog/mobile/cup-3-mobile@1x.png"
+              srcset="images/catalog/mobile/cup-3-mobile@2x.png 2x" width="68" height="78"
+              alt="Со вкусом рыбы, 500 граммов.">
+          </picture>
           <h2 class="catalog-card__title">Cat Energy PRO 500 г.</h2>
           <div class="catalog-card__params">
             <div class="catalog-card__row">
@@ -95,7 +120,13 @@
         </li>
 
         <li class="catalog__item catalog-card">
-          <img class="catalog-card__image" src="#" width="1" height="1" alt="Со вкусом рыбы, 1000 граммов.">
+          <picture>
+            <source width="168" height="200" type="image/png" media="(min-width: 768px)"
+              srcset="images/catalog/cup-4@1x.png 1x, images/catalog/cup-4@2x.png 2x">
+            <img class="catalog-card__image" src="images/catalog/mobile/cup-4-mobile@1x.png"
+              srcset="images/catalog/mobile/cup-4-mobile@2x.png 2x" width="84" height="100"
+              alt="Со вкусом рыбы, 1000 граммов.">
+          </picture>
           <h2 class="catalog-card__title">Cat Energy PRO 1000 г.</h2>
           <div class="catalog-card__params">
             <div class="catalog-card__row">
@@ -115,7 +146,13 @@
         </li>
 
         <li class="catalog__item catalog-card">
-          <img class="catalog-card__image" src="#" width="1" height="1" alt="С гречкой, 500 граммов.">
+          <picture>
+            <source width="161" height="171" type="image/png" media="(min-width: 768px)"
+              srcset="images/catalog/cup-5@1x.png 1x, images/catalog/cup-5@2x.png 2x">
+            <img class="catalog-card__image" src="images/catalog/mobile/cup-5-mobile@1x.png"
+              srcset="images/catalog/mobile/cup-5-mobile@2x.png 2x" width="68" height="78"
+              alt="С гречкой, 500 граммов.">
+          </picture>
           <h2 class="catalog-card__title">Cat Energy PRO 500 г.</h2>
           <div class="catalog-card__params">
             <div class="catalog-card__row">
@@ -135,7 +172,13 @@
         </li>
 
         <li class="catalog__item catalog-card">
-          <img class="catalog-card__image" src="#" width="1" height="1" alt="С гречкой, 1000 граммов.">
+          <picture>
+            <source width="168" height="200" type="image/png" media="(min-width: 768px)"
+              srcset="images/catalog/cup-6@1x.png 1x, images/catalog/cup-6@2x.png 2x">
+            <img class="catalog-card__image" src="images/catalog/mobile/cup-6-mobile@1x.png"
+              srcset="images/catalog/mobile/cup-6-mobile@2x.png 2x" width="84" height="100"
+              alt="С гречкой, 1000 граммов.">
+          </picture>
           <h2 class="catalog-card__title">Cat Energy PRO 1000 г.</h2>
           <div class="catalog-card__params">
             <div class="catalog-card__row">
@@ -155,7 +198,12 @@
         </li>
 
         <li class="catalog__item catalog-card">
-          <img class="catalog-card__image" src="#" width="1" height="1" alt="С рисом, 500 граммов.">
+          <picture>
+            <source width="163" height="174" type="image/png" media="(min-width: 768px)"
+              srcset="images/catalog/cup-7@1x.png 1x, images/catalog/cup-7@2x.png 2x">
+            <img class="catalog-card__image" src="images/catalog/mobile/cup-7-mobile@1x.png"
+              srcset="images/catalog/mobile/cup-7-mobile@2x.png 2x" width="68" height="78" alt="С рисом, 500 граммов.">
+          </picture>
           <h2 class="catalog-card__title">Cat Energy PRO 500 г.</h2>
           <div class="catalog-card__params">
             <div class="catalog-card__row">
@@ -260,11 +308,15 @@
     </section>
   </main>
   <footer class="footer">
-    <a class="footer__logo" href="index.html"><img class="footer__logo-image" src="#" width="1" height="1" alt="Логотип"></a>
+    <a class="footer__logo" href="index.html"><img class="footer__logo-image" src="#" width="1" height="1"
+        alt="Логотип"></a>
     <div class="social">
-      <a class="social__link social__link--vk" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">VK</a>
-      <a class="social__link social__link--yt" href="https://www.youtube.com/channel/@HTMLAcademyTV" target="_blank" rel="noreferrer noopener">YT</a>
-      <a class="social__link social__link--tg" href="https://t.me/s/htmlacademy" target="_blank" rel="noreferrer noopener">TG</a>
+      <a class="social__link social__link--vk" href="https://vk.com/htmlacademy" target="_blank"
+        rel="noreferrer noopener">VK</a>
+      <a class="social__link social__link--yt" href="https://www.youtube.com/channel/@HTMLAcademyTV" target="_blank"
+        rel="noreferrer noopener">YT</a>
+      <a class="social__link social__link--tg" href="https://t.me/s/htmlacademy" target="_blank"
+        rel="noreferrer noopener">TG</a>
     </div>
     <div class="html-academy">
       <a class="html-academy__link" href="#" target="_blank" rel="noreferrer noopener">
@@ -274,4 +326,5 @@
     </div>
   </footer>
 </body>
+
 </html>
