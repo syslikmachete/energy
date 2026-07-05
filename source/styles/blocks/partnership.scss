@@ -1,18 +1,18 @@
 .partnership {
-  .partnership__title {
+  &__title {
     font-family: "Oswald", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
-    color: #111111;
+    color: $charcoal;
   }
 
-  .partnership__link {
+  &__link {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    color: #444444;
+    color: $dark-grey;
   }
 }

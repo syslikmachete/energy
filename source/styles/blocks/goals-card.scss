@@ -1,38 +1,30 @@
 @use "../common/variables.scss";
 
 .goals-card {
-  .goals-card__title {
+  &__title {
     font-family: "Oswald", sans-serif;
     font-weight: 400;
     font-size: 24px;
     line-height: 37px;
     text-transform: uppercase;
-    color: #000000;
+    color: $black;
   }
 
-  .goals-card__description {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-    color: #444444;
-  }
-
-  .goals-card__link {
+  &__link {
     font-family: "Oswald", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 16px;
     text-transform: uppercase;
     text-align: center;
-    color: #000000;
+    color: $black;
   }
 
-  .goals-card--slim {
+  &--slim {
     background-color: $basic-green;
   }
 
-  .goals-card--pro {
+  &--pro {
     background-color: $basic-grey;
   }
 }

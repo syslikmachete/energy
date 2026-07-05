@@ -1,6 +1,10 @@
 @use "./variables.scss";
 
 .button {
+  padding: 10px 44px;
+  width: 280px;
+  height: 40px;
+  border: none;
   background-color: $basic-green;
 }
 

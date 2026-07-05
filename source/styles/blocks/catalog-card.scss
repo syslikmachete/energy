@@ -1,29 +1,29 @@
 .catalog-card {
-  .catalog-card__title {
+  &__title {
     font-family: "Oswald", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
-    color: #222222;
+    color: $dark-grey-2;
   }
 
-  .catalog-card__params {
+  &__params {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
     text-align: center;
-    color: #444444;
+    color: $dark-grey;
   }
 
-  .catalog-card__button {
+  &__button {
     font-family: "Oswald", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
     text-align: center;
-    color: #ffffff;
+    color: $white;
   }
 }

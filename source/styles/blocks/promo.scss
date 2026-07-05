@@ -1,31 +1,31 @@
 .promo {
   background-color: rgba(104, 183, 56, 0.85);
 
-  .promo__title {
+  &__title {
     font-family: "Oswald", sans-serif;
     font-weight: 400;
     font-size: 36px;
     line-height: 36px;
     text-align: center;
-    color: #ffffff;
+    color: $white;
   }
 
-  .promo__subtitle {
+  &__subtitle {
     font-family: "Oswald", sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 14px;
     text-transform: uppercase;
-    color: #ffffff;
+    color: $white;
   }
 
-  .promo__button {
+  &__button {
     font-family: "Oswald", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
     text-align: center;
-    color: #ffffff;
+    color: $white;
   }
 }
