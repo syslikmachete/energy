@@ -1,0 +1,21 @@
+.promo {
+  background-color: rgba(104, 183, 56, 0.85);
+
+  &__title {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: $white;
+  }
+
+  &__subtitle {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: $white;
+  }
+}
