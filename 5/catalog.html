@@ -17,12 +17,25 @@
 
 <body class="page__body">
   <header class="header">
-    <a class="header__logo logo" href="index.html">
-      <img class="logo__image logo__image-icon" src="#" width="1" height="1" alt="Логотип компании Cat Energy">
-      <img class="logo__image logo__image-text" src="#" width="1" height="1" alt="">
-    </a>
+    <div class="header__wrapper">
+      <a class="header__logo logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="images/icons/logo-desktop.svg" width="202" height="59"
+            type="image/svg+xml">
+          <source media="(min-width: 768px)" srcset="images/icons/logo-tablet.svg" width="174" height="50"
+            type="image/svg+xml">
+          <img class="logo__image" src="images/icons/logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
+        </picture>
+        <img class="logo__text" src="images/icons/logo-text-mobile.svg" width="101" height="18" alt="">
+      </a>
+      <div class="header__menu">
+        <button class="header__button header__button--open" type="button" aria-label="Открыть меню"><img
+            src="./images/icons/menu.svg" width="24" height="24" alt="" aria-hidden="true"></button>
+        <button class="header__button header__button--close" type="button" aria-label="Закрыть меню"><img
+            src="./images/icons/menu-close.svg" width="18" height="18" alt="" aria-hidden="true"></button>
+      </div>
+    </div>
     <nav class="navigation">
-      <button class="navigation__button navigation__button--close" type="button">Закрыть</button>
       <ul class="navigation__list">
         <li class="navigation__item">
           <a class="navigation__link navigation__link--current" href="index.html">Главная</a>
@@ -308,20 +321,24 @@
     </section>
   </main>
   <footer class="footer">
-    <a class="footer__logo" href="index.html"><img class="footer__logo-image" src="#" width="1" height="1"
-        alt="Логотип"></a>
+    <a class="footer__logo" href="index.html"><img class="footer__logo-image" src="./images/icons/logo-text-mobile.svg"
+        width="128" height="24"
+        alt="Логотип Cat Energy"></a>
     <div class="social">
       <a class="social__link social__link--vk" href="https://vk.com/htmlacademy" target="_blank"
-        rel="noreferrer noopener">VK</a>
+        rel="noreferrer noopener"><img src="./images/icons/vk-logo.svg" width="28" height="22" alt="Мы во ВКонтакте"></a>
       <a class="social__link social__link--yt" href="https://www.youtube.com/channel/@HTMLAcademyTV" target="_blank"
-        rel="noreferrer noopener">YT</a>
+        rel="noreferrer noopener"><img src="./images/icons/youtube-logo.svg" width="28" height="22"
+          alt="Мы на YouTube"></a>
       <a class="social__link social__link--tg" href="https://t.me/s/htmlacademy" target="_blank"
-        rel="noreferrer noopener">TG</a>
+        rel="noreferrer noopener"><img src="./images/icons/telegram-logo.svg" width="28" height="22"
+          alt="Мы в Telegram"></a>
     </div>
     <div class="html-academy">
       <a class="html-academy__link" href="#" target="_blank" rel="noreferrer noopener">
         <span class="html-academy__text">HTML Academy</span>
-        <img class="html-academy__logo" src="#" width="1" height="1" alt="Логотип HTML Academy">
+        <img class="html-academy__logo" src="./images/icons/html-logo.svg" width="27" height="34"
+          alt="Логотип HTML Academy">
       </a>
     </div>
   </footer>
