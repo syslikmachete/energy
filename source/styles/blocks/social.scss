@@ -1,3 +1,13 @@
 .social {
-  color: inherit;
+  .social__link {
+    display: flex;
+    width: 28px;
+    height: 22px;
+  }
+
+  .social__link img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
