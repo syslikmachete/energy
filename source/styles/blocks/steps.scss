@@ -1,35 +1,5 @@
-@use "../common/variables.scss";
-
 .steps {
   &__image {
     background-color: $basic-green;
-  }
-
-  @media (min-width: 768px) {
-    &__item {
-      &--step-1 {
-        background-image: url("../../icons/stack.svg#number-1");
-        background-size: 106px 280px;
-        background-repeat: no-repeat;
-      }
-
-      &--step-2 {
-        background-image: url("../../icons/stack.svg#number-2");
-        background-size: 134px 280px;
-        background-repeat: no-repeat;
-      }
-
-      &--step-3 {
-        background-image: url("../../icons/stack.svg#number-3");
-        background-size: 134px 280px;
-        background-repeat: no-repeat;
-      }
-
-      &--step-4 {
-        background-image: url("../../icons/stack.svg#number-4");
-        background-size: 136px 280px;
-        background-repeat: no-repeat;
-      }
-    }
   }
 }
