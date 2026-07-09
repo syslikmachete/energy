@@ -1,3 +1,20 @@
 .social {
-  color: inherit;
+  &__link {
+    display: inline-block;
+    width: 28px;
+    height: 22px;
+    background-color: $special-grey-3;
+
+    &--vk {
+      mask-image: url("../../icons/stack.svg#icon-vk");
+    }
+
+    &--yt {
+      mask-image: url("../../icons/stack.svg#icon-youtube");
+    }
+
+    &--tg {
+      mask-image: url("../../icons/stack.svg#icon-telegram");
+    }
+  }
 }
