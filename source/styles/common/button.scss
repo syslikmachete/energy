@@ -1,16 +1,10 @@
-@use "./variables.scss";
-
 .button {
-  padding: 10px 44px;
-  width: 280px;
-  height: 40px;
+  @include font-oswald;
+  @include text-center;
+  @include text-uppercase;
+  @include text-size(16px, 20px);
   border: none;
   background-color: $basic-green;
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  text-align: center;
   color: $white;
+  cursor: pointer;
 }

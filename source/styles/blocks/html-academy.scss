@@ -1,12 +1,16 @@
 .html-academy {
   &__link {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 140px;
+
     &::before {
-      content: "";
       display: block;
-      width: 27px;
       height: 34px;
-      mask-image: url("../../icons/stack.svg#icon-html");
+      width: 27px;
       background-color: $special-grey-3;
+      mask-image: url("../../icons/stack.svg#icon-html");
+      content: "";
     }
   }
 }

@@ -1,0 +1,9 @@
+.gift {
+  &__description {
+    @include font-lato;
+    @include text-center;
+    @include text-size(16px, 20px);
+    margin: 0;
+    color: $white;
+  }
+}

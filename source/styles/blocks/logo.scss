@@ -1,3 +1,7 @@
 .logo {
-  color: inherit;
+  &__text {
+    @media (min-width: $tablet) {
+      display: none;
+    }
+  }
 }

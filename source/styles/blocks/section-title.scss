@@ -1,8 +1,9 @@
 .section-title {
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 40px;
-  text-align: center;
+  @include font-oswald;
+  @include text-size(36px, 40px);
   color: $black;
+
+  @media (min-width: $tablet) {
+    @include text-size(60px, 60px);
+  }
 }

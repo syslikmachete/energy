@@ -1,36 +1,125 @@
-@use "../common/variables.scss";
-
 .goals-card {
-  &__title {
-    font-family: "Oswald", sans-serif;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 37px;
-    text-transform: uppercase;
-    color: $black;
+  position: relative;
+  padding: 30px 33px 22px 20px;
+  width: 280px;
+  background-color: $basic-grey;
+
+  @media (min-width: $tablet) {
+    padding: 77px 0 53px 52px;
+    width: 708px;
   }
 
-  &__link {
-    font-family: "Oswald", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 16px;
-    text-transform: uppercase;
-    text-align: center;
-    color: $black;
+  @media (min-width: $desktop) {
+    max-width: 570px;
   }
 
   &--slim {
-    background-image: url("../../icons/stack.svg#cat");
-    background-size: 50px 53px;
-    background-repeat: no-repeat;
-    background-color: $basic-grey;
+    &::before {
+      left: 20px;
+      position: absolute;
+      top: 21px;
+      height: 53px;
+      width: 50px;
+      background-image: url("../../icons/stack.svg#cat");
+      content: "";
+
+      @media (min-width: $tablet) {
+        left: 445px;
+        top: 81px;
+        height: 211px;
+        width: 200px;
+      }
+
+      @media (min-width: $desktop) {
+        left: 52px;
+        top: 41px;
+        width: 100px;
+        height: 106px;
+      }
+    }
   }
 
   &--pro {
-    background-image: url("../../icons/stack.svg#puma");
-    background-size: 67px 50px;
-    background-repeat: no-repeat;
-    background-color: $basic-grey;
+    &::before {
+      left: 13px;
+      position: absolute;
+      top: 24px;
+      height: 50px;
+      width: 67px;
+      background-image: url("../../icons/stack.svg#puma");
+      content: "";
+
+      @media (min-width: $tablet) {
+        left: 411px;
+        top: 91px;
+        height: 200px;
+        width: 268px;
+      }
+
+      @media (min-width: $desktop) {
+        left: 33px;
+        top: 47px;
+        width: 134px;
+        height: 100px;
+      }
+    }
+  }
+
+  &__title {
+    @include font-oswald;
+    @include text-uppercase;
+    @include text-size(24px, 37px);
+    margin: 0 0 29px;
+    padding-left: 70px;
+    color: $black;
+
+    @media (min-width: $tablet) {
+      @include text-size(36px, 36px);
+      margin-bottom: 24px;
+      max-width: 340px;
+      padding: 0;
+    }
+  }
+
+  &__description {
+    @include font-lato;
+    margin: 0 0 38px;
+
+    @media (min-width: $tablet) {
+      @include text-size(16px, 24px);
+      margin-bottom: 48px;
+      max-width: 340px;
+      color: $black;
+    }
+  }
+
+  &__link {
+    @include font-oswald;
+    @include text-center;
+    @include text-uppercase;
+    @include text-size(16px, 16px);
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    color: $black;
+
+    @media (min-width: $tablet) {
+      gap: 25px;
+      font-size: 20px;
+    }
+
+    &::before {
+      position: absolute;
+      top: -19px;
+      border: 1px solid #d9d9d9;
+      height: 0;
+      width: 240px;
+      content: "";
+
+      @media (min-width: $tablet) {
+        display: none;
+      }
+    }
   }
 }
