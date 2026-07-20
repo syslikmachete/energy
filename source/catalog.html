@@ -19,7 +19,7 @@
   <header class="header">
     <div class="header__wrapper">
       <div class="header__inner-wrapper">
-        <a class="header__logo" href="index.html">
+        <a class="header__logo logo" href="index.html">
           <picture>
             <source media="(min-width: 1440px)" srcset="images/icons/logo-desktop.svg" width="202" height="59"
               type="image/svg+xml">
@@ -309,8 +309,8 @@
         <p class="subscribe__description">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
           <div class="subscribe-form__group">
-            <label class="visually-hidden">Электронная почта для рассылки</label>
-            <input class="subscribe-form__input" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+            <label class="visually-hidden" for="email">Электронная почта для рассылки</label>
+            <input class="subscribe-form__input" type="email" name="email" id="email"  placeholder="kuklachev@gmail.com" required>
             <button class="button subscribe-form__button" type="submit">Подписаться</button>
           </div>
         </form>

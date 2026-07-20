@@ -22,20 +22,6 @@
       width: 50px;
       background-image: url("../../icons/stack.svg#cat");
       content: "";
-
-      @media (min-width: $tablet) {
-        left: 445px;
-        top: 81px;
-        height: 211px;
-        width: 200px;
-      }
-
-      @media (min-width: $desktop) {
-        left: 52px;
-        top: 41px;
-        width: 100px;
-        height: 106px;
-      }
     }
   }
 
@@ -48,20 +34,6 @@
       width: 67px;
       background-image: url("../../icons/stack.svg#puma");
       content: "";
-
-      @media (min-width: $tablet) {
-        left: 411px;
-        top: 91px;
-        height: 200px;
-        width: 268px;
-      }
-
-      @media (min-width: $desktop) {
-        left: 33px;
-        top: 47px;
-        width: 134px;
-        height: 100px;
-      }
     }
   }
 
@@ -116,10 +88,48 @@
       height: 0;
       width: 240px;
       content: "";
-
-      @media (min-width: $tablet) {
-        display: none;
-      }
     }
+  }
+}
+
+@media (min-width: $tablet) {
+  .goals-card--slim::before {
+    left: 445px;
+    top: 81px;
+    height: 211px;
+    width: 200px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .goals-card--slim::before {
+    left: 52px;
+    top: 41px;
+    width: 100px;
+    height: 106px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .goals-card--pro::before {
+    left: 411px;
+    top: 91px;
+    height: 200px;
+    width: 268px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .goals-card--pro::before {
+    left: 33px;
+    top: 47px;
+    width: 134px;
+    height: 100px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .goals-card__link::before {
+    display: none;
   }
 }

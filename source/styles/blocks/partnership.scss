@@ -10,12 +10,12 @@
   }
 
   &__address {
+    @include font-lato;
+    @include text-size(14px, 20px);
     display: inline-block;
     padding: 0;
     margin: 0;
     max-width: 140px;
-    @include font-lato;
-    @include text-size(14px, 20px);
     color: $dark-grey;
 
     @media (min-width: $tablet) {
