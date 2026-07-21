@@ -1,20 +1,17 @@
 .additional-card {
   &__title {
-    font-family: "Oswald", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 16px;
-    text-transform: uppercase;
-    text-align: center;
+    @include font-oswald;
+    @include text-center;
+    @include text-size(16px, 16px);
+    @include text-uppercase;
+    margin: 0;
     color: $dark-grey-2;
   }
 
   &__row {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 14px;
-    text-align: center;
+    @include font-lato;
+    @include text-center;
+    @include text-size(14px, 14px);
     color: $dark-grey;
   }
 }

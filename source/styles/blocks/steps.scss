@@ -1,5 +1,113 @@
 .steps {
-  &__image {
+  &__title {
+    margin: 0 0 30px;
+
+    @media (min-width: $tablet) {
+      @include text-size(60px, 60px);
+      margin-bottom: 40px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 0 49px;
+
+    @media (min-width: $tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 230px);
+      grid-auto-rows: minmax(280px, auto);
+      counter-reset: step-counter;
+      gap: 37px 153px;
+    }
+
+    @media (min-width: $desktop) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 94px;
+      margin-bottom: 69px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 31px;
+    width: 100%;
+
+    @media (min-width: $desktop) {
+      width: 230px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__icon {
+    width: 60px;
+    height: 60px;
     background-color: $basic-green;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+
+    @media (min-width: $tablet) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &__item--step-1 &__icon {
+    background-image: url("../../icons/stack.svg#icon-1");
+    background-size: 25px 28px;
+  }
+
+  &__item--step-2 &__icon {
+    background-image: url("../../icons/stack.svg#icon-2");
+    background-size: 26px 28px;
+  }
+
+  &__item--step-3 &__icon {
+    background-image: url("../../icons/stack.svg#icon-3");
+    background-size: 25px 30px;
+  }
+
+  &__item--step-4 &__icon {
+    background-image: url("../../icons/stack.svg#icon-4");
+    background-size: 26px 31px;
+  }
+
+  &__description {
+    @include text-size(14px, 18px);
+    margin: 0;
+
+    @media (min-width: $tablet) {
+      @include text-size(16px, 24px);
+      max-width: 250px;
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+  .steps__item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 40px;
+    height: 280px;
+
+    &::after {
+      @include text-size(280px, 280px);
+      @include font-oswald;
+      @include text-center;
+      counter-increment: step-counter;
+      content: counter(step-counter);
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: $basic-grey;
+      z-index: -1;
+    }
   }
 }

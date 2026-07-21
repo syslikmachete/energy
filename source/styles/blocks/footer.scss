@@ -1,5 +1,13 @@
-@use "../common/variables.scss";
-
 .footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 20px;
   background-color: $basic-grey;
+
+  &__logo-image {
+    display: flex;
+    align-items: center;
+  }
 }

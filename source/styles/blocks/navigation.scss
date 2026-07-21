@@ -1,10 +1,32 @@
 .navigation {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
+
+  &__list {
+    @include text-center;
+
+    @media (min-width: $tablet) {
+      display: flex;
+      align-items: center;
+      gap: 33px;
+      justify-content: center;
+    }
+  }
+
   &__link {
-    font-family: "Oswald", sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 20px;
-    text-transform: uppercase;
+    @include font-oswald;
+    @include text-size(20px, 20px);
+    @include text-uppercase;
+    display: inline-block;
+    padding: 22px 24px;
     color: $black;
+
+    @media (min-width: $tablet) {
+      padding: 0;
+      white-space: nowrap;
+    }
   }
 }

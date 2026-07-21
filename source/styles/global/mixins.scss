@@ -1,9 +1,32 @@
 @mixin font-face($font-family, $font-weight, $font-style, $font-src) {
   @font-face {
     font-family: $font-family;
-    font-weight: $font-weight;
     font-style: $font-style;
+    font-weight: $font-weight;
     font-display: swap;
     src: $font-src;
   }
+}
+
+@mixin font-oswald {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+}
+
+@mixin font-lato {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+@mixin text-uppercase {
+  text-transform: uppercase;
+}
+
+@mixin text-center {
+  text-align: center;
+}
+
+@mixin text-size($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
 }

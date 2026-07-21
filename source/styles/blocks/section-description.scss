@@ -1,7 +1,6 @@
 .section-description {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
+  @include font-lato;
+  @include text-size(14px, 18px);
+  margin: 0;
   color: $dark-grey;
 }
