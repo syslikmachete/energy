@@ -1,0 +1,1 @@
+var e=document.querySelector(".header__menu"),s=document.querySelector(".header__button");s.addEventListener("click",()=>{e.classList.contains("header__menu--closed")?(e.classList.remove("header__menu--closed"),e.classList.add("header__menu--opened")):(e.classList.add("header__menu--closed"),e.classList.remove("header__menu--opened"))});
