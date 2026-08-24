@@ -6,20 +6,25 @@
       @include text-size(60px, 60px);
       margin-bottom: 40px;
     }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 26px;
+    }
   }
 
   &__list {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin: 0 0 49px;
+    margin: 0 0 47px;
 
     @media (min-width: $tablet) {
       display: grid;
-      grid-template-columns: repeat(2, 230px);
+      grid-template-columns: repeat(2, minmax(230px, 1fr));
       grid-auto-rows: minmax(280px, auto);
       counter-reset: step-counter;
       gap: 37px 153px;
+      padding-right: 95px;
     }
 
     @media (min-width: $desktop) {
@@ -27,7 +32,8 @@
       flex-direction: row;
       justify-content: space-between;
       gap: 94px;
-      margin-bottom: 69px;
+      margin-bottom: 75px;
+      padding-right: 0;
     }
   }
 

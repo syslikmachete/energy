@@ -1,9 +1,45 @@
 .subscribe {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 1em 0 auto;
+    width: auto;
+    height: 2px;
+    background-color: $basic-green;
+    transform: translateY(-50%);
+  }
+
+  &__title {
+    margin-bottom: 32px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 66px;
+    }
+  }
+
+  @media (max-width: ($tablet - 1px)) {
+    &::after {
+      display: none;
+    }
+  }
+
   &__description {
     @include font-oswald;
     @include text-center;
     @include text-size(16px, 24px);
-    margin: 0;
+    margin: 0 auto;
+    margin-bottom: 24px;
     color: $black;
+
+    @media (min-width: $tablet) {
+      @include text-size(24px, 32px);
+      max-width: 632px;
+    }
+
+    @media (min-width: $desktop) {
+      max-width: max-content;
+    }
   }
 }

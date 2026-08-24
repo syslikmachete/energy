@@ -1,17 +1,66 @@
 .additional-card {
-  &__title {
-    @include font-oswald;
-    @include text-center;
-    @include text-size(16px, 16px);
-    @include text-uppercase;
-    margin: 0;
-    color: $dark-grey-2;
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    border-inline: 1px solid $special-grey;
   }
 
-  &__row {
+  @media (min-width: $desktop) {
+    border-inline: none;
+  }
+
+  &__title {
+    @include font-oswald;
+    @include text-size(16px, 16px);
+    @include text-uppercase;
+    margin-block: 0 13px;
+    color: $dark-grey-2;
+
+    @media (min-width: $tablet) {
+      font-size: 20px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $desktop) {
+      width: 325px;
+    }
+  }
+
+  &__params {
     @include font-lato;
     @include text-center;
     @include text-size(14px, 14px);
+    display: flex;
+    justify-content: space-between;
     color: $dark-grey;
+    margin-bottom: 15px;
+
+    @media (min-width: $tablet) {
+      font-size: 16px;
+      gap: 22px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $desktop) {
+      width: 285px;
+    }
+  }
+
+  &__button {
+    &:hover {
+      background: $basic-green-2;
+    }
+
+    &:active {
+      color: rgba($white, 0.3);
+    }
+
+    @media (min-width: $tablet) {
+      width: 100%;
+    }
+
+    @media (min-width: $desktop) {
+      width: 244px;
+    }
   }
 }

@@ -1,20 +1,63 @@
 .social {
-  &__link {
-    display: inline-block;
-    height: 22px;
-    width: 28px;
-    background-color: $special-grey-3;
+  position: relative;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0;
 
-    &--vk {
-      mask-image: url("../../icons/stack.svg#icon-vk");
-    }
-
-    &--yt {
-      mask-image: url("../../icons/stack.svg#icon-youtube");
-    }
-
-    &--tg {
-      mask-image: url("../../icons/stack.svg#icon-telegram");
-    }
+  @media (min-width: $tablet) {
+    padding: 0;
+    gap: 24px;
+    width: auto;
   }
+}
+
+.social::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #d9d9d9;
+}
+
+.social::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #d9d9d9;
+}
+
+.social__link {
+  display: inline-block;
+  height: 22px;
+  width: 28px;
+  background-color: $special-grey-3;
+  transition: 0.2s ease;
+}
+
+.social__link--vk {
+  mask-image: url("../../icons/stack.svg#icon-vk");
+}
+
+.social__link--yt {
+  mask-image: url("../../icons/stack.svg#icon-youtube");
+}
+
+.social__link--tg {
+  mask-image: url("../../icons/stack.svg#icon-telegram");
+}
+
+.social__link:hover,
+.social__link:focus {
+  background-color: #68b738;
+}
+
+.social__link:active {
+  opacity: 0.3;
 }

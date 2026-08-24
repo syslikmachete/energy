@@ -1,4 +1,29 @@
 .additional-card-gift {
-  background-color: $basic-green;
-  background-image: url("../../icons/stack.svg#gift");
+  position: relative;
+  z-index: 1;
+  background: no-repeat center / 100%;
+
+  background-image:
+    image-set(url("../../images/catalog/mobile/catalog-background-mobile@1x.jpg") 1x,
+    url("../../images/catalog/mobile/catalog-background-mobile@2x.jpg") 2x);
+
+  @media (min-width: $tablet) {
+    background-image:
+      image-set(url("../../images/catalog/tablet/catalog-background-tablet@1x.jpg") 1x,
+      url("../../images/catalog/tablet/catalog-background-tablet@2x.jpg") 2x);
+  }
+
+  @media (min-width: $desktop) {
+    background-image:
+      image-set(url("../../images/catalog/desktop/catalog-background-desktop@1x.jpg") 1x,
+      url("../../images/catalog/desktop/catalog-background-desktop@2x.jpg") 2x);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: rgba($basic-green, 0.85);
+  }
 }

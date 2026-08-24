@@ -3,4 +3,8 @@
   @include text-size(14px, 18px);
   margin: 0;
   color: $dark-grey;
+
+  @media (min-width: $desktop) {
+    @include text-size(16px, 24px);
+  }
 }

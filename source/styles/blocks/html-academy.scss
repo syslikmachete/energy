@@ -1,8 +1,21 @@
 .html-academy {
+  &__text {
+    @include font-lato;
+    @include text-size(16px, 20px);
+    font-weight: 400;
+    color: $dark-grey;
+  }
+
   &__link {
     display: flex;
+    align-items: center;
     flex-direction: row-reverse;
     gap: 140px;
+    transition: 0.2s ease;
+
+    &:active {
+      opacity: 0.3;
+    }
 
     &::before {
       display: block;
@@ -11,6 +24,19 @@
       background-color: $special-grey-3;
       mask-image: url("../../icons/stack.svg#icon-html");
       content: "";
+      transition: 0.2s ease;
+    }
+
+    @media (min-width: $tablet) {
+      gap: 23px;
     }
   }
+}
+
+.html-academy__link:hover::before {
+  background-color: #68b738;
+}
+
+.html-academy__link:focus::before {
+  background-color: #68b738;
 }
