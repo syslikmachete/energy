@@ -30,8 +30,8 @@
         <img class="logo__text" src="images/icons/logo-text-mobile.svg" width="101" height="18" alt="">
       </a>
 
-      <div class="header__menu header__menu--closed">
-        <button class="header__button" type="button" aria-label="Открыть меню"></button>
+      <div class="header__menu" data-js-menu data-state="closed">
+        <button class="header__button" type="button" aria-label="Открыть меню" data-js-toggle></button>
 
         <nav class="navigation header__navigation">
           <ul class="navigation__list list-reset">
@@ -55,12 +55,34 @@
         <h1 class="hero__title">Функциональное питание для котов</h1>
         <p class="hero__subtitle">Занялся собой? Займись котом!</p>
         <picture>
-          <source width="552" height="499" type="image/png" media="(min-width: 1440px)"
+          <source
+            width="552" height="499"
+            type="image/webp"
+            media="(min-width: 1440px)"
+            srcset="images/index/desktop/index-cup-desktop@1x.webp 1x, images/index/desktop/index-cup-desktop@2x.webp 2x">
+          <source
+            width="709" height="609"
+            type="image/webp"
+            media="(min-width: 768px)"
+            srcset="images/index/tablet/index-cup-tablet@1x.webp 1x, images/index/tablet/index-cup-tablet@2x.webp 2x">
+          <source
+            type="image/webp"
+            srcset="images/index/mobile/index-cup-mobile@1x.webp 1x, images/index/mobile/index-cup-mobile@2x.webp 2x">
+          <source
+            width="552" height="499"
+            type="image/png"
+            media="(min-width: 1440px)"
             srcset="images/index/desktop/index-cup-desktop@1x.png 1x, images/index/desktop/index-cup-desktop@2x.png 2x">
-          <source width="709" height="609" type="image/png" media="(min-width: 768px)"
+          <source
+            width="709" height="609"
+            type="image/png"
+            media="(min-width: 768px)"
             srcset="images/index/tablet/index-cup-tablet@1x.png 1x, images/index/tablet/index-cup-tablet@2x.png 2x">
-          <img class="hero__image" src="images/index/mobile/index-cup-mobile@1x.png"
-            srcset="images/index/mobile/index-cup-mobile@2x.png 2x" width="280" height="270"
+          <img
+            class="hero__image"
+            width="280" height="270"
+            src="images/index/mobile/index-cup-mobile@1x.png"
+            srcset="images/index/mobile/index-cup-mobile@2x.png 2x"
             alt="Продукт питания для котов">
         </picture>
         <button class="button hero__button" type="button">Подобрать программу</button>
@@ -152,17 +174,47 @@
           </div>
           <div class="example__comparison">
             <picture>
-              <source width="560" height="512" type="image/png" media="(min-width: 768px)"
+              <source
+                width="560" height="512"
+                type="image/webp"
+                media="(min-width: 768px)"
+                srcset="images/index/cat-before@1x.webp 1x, images/index/cat-before@2x.webp 2x">
+              <source
+                width="280" height="256"
+                type="image/webp"
+                srcset="images/index/mobile/cat-before-mobile@1x.webp 1x, images/index/mobile/cat-before-mobile@2x.webp 2x">
+              <source
+                width="560" height="512"
+                type="image/png"
+                media="(min-width: 768px)"
                 srcset="images/index/cat-before@1x.png 1x, images/index/cat-before@2x.png 2x">
-              <img class="example__image-range" src="images/index/mobile/cat-before-mobile@1x.png"
-                srcset="images/index/mobile/cat-before-mobile@2x.png 2x" width="280" height="256"
+              <img
+                class="example__image-range"
+                width="280" height="256"
+                src="images/index/mobile/cat-before-mobile@1x.png"
+                srcset="images/index/mobile/cat-before-mobile@2x.png 2x"
                 alt="Кот Борис до смены корма">
             </picture>
             <picture>
-              <source width="560" height="512" type="image/png" media="(min-width: 768px)"
+              <source
+                width="560" height="512"
+                type="image/webp"
+                media="(min-width: 768px)"
+                srcset="images/index/cat-after@1x.webp 1x, images/index/cat-after@2x.webp 2x">
+              <source
+                width="280" height="256"
+                type="image/webp"
+                srcset="images/index/mobile/cat-after-mobile@1x.webp 1x, images/index/mobile/cat-after-mobile@2x.webp 2x">
+              <source
+                width="560" height="512"
+                type="image/png"
+                media="(min-width: 768px)"
                 srcset="images/index/cat-after@1x.png 1x, images/index/cat-after@2x.png 2x">
-              <img class="example__image" src="images/index/mobile/cat-after-mobile@1x.png"
-                srcset="images/index/mobile/cat-after-mobile@2x.png 2x" width="280" height="256"
+              <img
+                class="example__image"
+                width="280" height="256"
+                src="images/index/mobile/cat-after-mobile@1x.png"
+                srcset="images/index/mobile/cat-after-mobile@2x.png 2x"
                 alt="Кот Борис после смены корма">
             </picture>
             <button class="example__slider" type="button" aria-label="Показать кота до/после">
