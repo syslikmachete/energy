@@ -1,10 +1,12 @@
 .catalog-card-more {
   border-top: 1px solid $special-grey-2;
-  margin-inline: -20px;
+  margin-left: -20px;
+  margin-right: -20px;
   padding: 20px 20px 0;
 
   @media (min-width: $tablet) {
-    margin-inline: 0;
+    margin-left: 0;
+    margin-right: 0;
     padding-bottom: 40px;
   }
 }
@@ -36,7 +38,8 @@
 @media (min-width: $tablet) {
   .catalog-card-more__wrapper {
     max-width: 170px;
-    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 108px;
   }
 
@@ -78,7 +81,8 @@
   display: inline-block;
   background-color: $basic-grey;
   color: $dark-grey;
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
 
   &:hover {
     background-color: $special-grey-2;
