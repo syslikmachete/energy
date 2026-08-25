@@ -2,11 +2,13 @@
   width: 100%;
 
   @media (min-width: $tablet) {
-    border-inline: 1px solid $special-grey;
+    border-left: 1px solid $special-grey;
+    border-right: 1px solid $special-grey;
   }
 
   @media (min-width: $desktop) {
-    border-inline: none;
+    border-left: none;
+    border-right: none;
   }
 
   &__title {
@@ -48,7 +50,7 @@
 
   &__button {
     &:hover {
-      background: $basic-green-2;
+      background-color: $basic-green-2;
     }
 
     &:active {
