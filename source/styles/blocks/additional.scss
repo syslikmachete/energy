@@ -73,25 +73,20 @@
     position: relative;
     z-index: 1;
     margin-bottom: 40px;
-    background: no-repeat center / 100% 100%;
-    background-image:
-      image-set(url("../../images/catalog/mobile/catalog-background-mobile@1x.jpg") 1x,
-      url("../../images/catalog/mobile/catalog-background-mobile@2x.jpg") 2x);
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-image: url("../../images/catalog/mobile/catalog-background-mobile@1x.jpg"), image-set(url("../../images/catalog/mobile/catalog-background-mobile@1x.webp") type("image/webp") 1x, url("../../images/catalog/mobile/catalog-background-mobile@2x.webp") type("image/webp") 2x, url("../../images/catalog/mobile/catalog-background-mobile@1x.jpg") type("image/jpeg") 1x, url("../../images/catalog/mobile/catalog-background-mobile@2x.jpg") type("image/jpeg") 2x);
 
     @media (min-width: $tablet) {
       margin-bottom: 80px;
-      background-image:
-        image-set(url("../../images/catalog/tablet/catalog-background-tablet@1x.jpg") 1x,
-        url("../../images/catalog/tablet/catalog-background-tablet@2x.jpg") 2x);
+      background-image: url("../../images/catalog/tablet/catalog-background-tablet@1x.jpg"), image-set(url("../../images/catalog/tablet/catalog-background-tablet@1x.webp") type("image/webp") 1x, url("../../images/catalog/tablet/catalog-background-tablet@2x.webp") type("image/webp") 2x, url("../../images/catalog/tablet/catalog-background-tablet@1x.jpg") type("image/jpeg") 1x, url("../../images/catalog/tablet/catalog-background-tablet@2x.jpg") type("image/jpeg") 2x);
     }
 
     @media (min-width: $desktop) {
       margin-bottom: 0;
       width: 245px;
-      background-image:
-        image-set(url("../../images/catalog/desktop/catalog-background-desktop@1x.jpg") 1x,
-        url("../../images/catalog/desktop/catalog-background-desktop@2x.jpg") 2x);
+      background-image: url("../../images/catalog/desktop/catalog-background-desktop@1x.jpg"), image-set(url("../../images/catalog/desktop/catalog-background-desktop@1x.webp") type("image/webp") 1x, url("../../images/catalog/desktop/catalog-background-desktop@2x.webp") type("image/webp") 2x, url("../../images/catalog/desktop/catalog-background-desktop@1x.jpg") type("image/jpeg") 1x, url("../../images/catalog/desktop/catalog-background-desktop@2x.jpg") type("image/jpeg") 2x);
     }
 
     &::before {
