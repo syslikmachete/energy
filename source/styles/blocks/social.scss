@@ -10,6 +10,14 @@
     padding: 0;
     gap: 24px;
     width: auto;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 }
 
