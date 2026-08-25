@@ -1,12 +1,10 @@
-const navMain = document.querySelector('.header__menu');
-const navToggle = document.querySelector('.header__button');
+const navMain = document.querySelector('[data-js-menu]');
+const navToggle = document.querySelector('[data-js-toggle]');
 
 navToggle.addEventListener('click', () => {
-  if (navMain.classList.contains('header__menu--closed')) {
-    navMain.classList.remove('header__menu--closed');
-    navMain.classList.add('header__menu--opened');
+  if (navMain.dataset.state === 'closed') {
+    navMain.dataset.state = 'opened';
   } else {
-    navMain.classList.add('header__menu--closed');
-    navMain.classList.remove('header__menu--opened');
+    navMain.dataset.state = 'closed';
   }
 });
