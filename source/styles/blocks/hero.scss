@@ -2,14 +2,14 @@
   position: relative;
   padding-top: 27px;
   background-size: 100%;
-  background-image: linear-gradient(to top, #ffffff 178px, rgba(104, 183, 56, 0.85) 178px), url("../../images/index/mobile/index-background-mobile@1x.jpg");
+  background-image: linear-gradient(to top, #ffffff 178px, rgba(104, 183, 56, 0.85) 178px), image-set(url("../../images/index/mobile/index-background-mobile@1x.webp") type("image/webp") 1x, url("../../images/index/mobile/index-background-mobile@2x.webp") type("image/webp") 2x, url("../../images/index/mobile/index-background-mobile@1x.jpg") type("image/jpeg") 1x, url("../../images/index/mobile/index-background-mobile@2x.jpg") type("image/jpeg") 2x);
   background-repeat: no-repeat;
   background-position: top;
   background-color: rgba(104, 183, 56, 0.85);
 
   @media (min-width: $tablet) {
     padding-top: 0;
-    background: 0 0;
+    background: none;
   }
 }
 
@@ -108,7 +108,10 @@
 }
 
 @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
-  .hero::before,
+  .hero::before {
+    display: none;
+  }
+
   .hero::after {
     display: none;
   }
@@ -119,7 +122,7 @@
     left: 50%;
     width: 50%;
     height: 694px;
-    background-image: image-set(url("../../images/index/desktop/index-background-desktop@1x.jpg") 1x, url("../../images/index/desktop/index-background-desktop@2x.jpg") 2x);
+    background-image: image-set(url("../../images/index/desktop/index-background-desktop@1x.webp") type("image/webp") 1x, url("../../images/index/desktop/index-background-desktop@2x.webp") type("image/webp") 2x, url("../../images/index/desktop/index-background-desktop@1x.jpg") type("image/jpeg") 1x, url("../../images/index/desktop/index-background-desktop@2x.jpg") type("image/jpeg") 2x);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
