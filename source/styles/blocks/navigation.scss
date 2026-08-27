@@ -17,10 +17,10 @@
   }
 
   &__item {
-    border-top: 1px solid #e6e6e6;
+    border-top: 1px solid $whisper;
 
     &:last-child {
-      border-bottom: 1px solid #e6e6e6;
+      border-bottom: 1px solid $whisper;
 
       @media (min-width: $tablet) {
         border-bottom: none;

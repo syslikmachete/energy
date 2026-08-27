@@ -2,10 +2,10 @@
   position: relative;
   padding-top: 27px;
   background-size: 100%;
-  background-image: linear-gradient(to top, #ffffff 178px, rgba(104, 183, 56, 0.85) 178px), image-set(url("../../images/index/mobile/index-background-mobile@1x.webp") type("image/webp") 1x, url("../../images/index/mobile/index-background-mobile@2x.webp") type("image/webp") 2x, url("../../images/index/mobile/index-background-mobile@1x.jpg") type("image/jpeg") 1x, url("../../images/index/mobile/index-background-mobile@2x.jpg") type("image/jpeg") 2x);
+  background-image: linear-gradient(to top, $white 178px, rgba($basic-green, 0.85) 178px), image-set(url("../../images/index/mobile/index-background-mobile@1x.webp") type("image/webp") 1x, url("../../images/index/mobile/index-background-mobile@2x.webp") type("image/webp") 2x, url("../../images/index/mobile/index-background-mobile@1x.jpg") type("image/jpeg") 1x, url("../../images/index/mobile/index-background-mobile@2x.jpg") type("image/jpeg") 2x);
   background-repeat: no-repeat;
   background-position: top;
-  background-color: rgba(104, 183, 56, 0.85);
+  background-color: rgba($basic-green, 0.85);
 
   @media (min-width: $tablet) {
     padding-top: 0;
