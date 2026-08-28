@@ -1,4 +1,24 @@
 .additional-card-gift {
-  background-color: $basic-green;
-  background-image: url("../../icons/stack.svg#gift");
+  position: relative;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-image: url("../../images/catalog/mobile/catalog-background-mobile@1x.jpg"), image-set(url("../../images/catalog/mobile/catalog-background-mobile@1x.webp") type("image/webp") 1x, url("../../images/catalog/mobile/catalog-background-mobile@2x.webp") type("image/webp") 2x, url("../../images/catalog/mobile/catalog-background-mobile@1x.jpg") type("image/jpeg") 1x, url("../../images/catalog/mobile/catalog-background-mobile@2x.jpg") type("image/jpeg") 2x);
+
+  @media (min-width: $tablet) {
+    background-image: url("../../images/catalog/tablet/catalog-background-tablet@1x.jpg"), image-set(url("../../images/catalog/tablet/catalog-background-tablet@1x.webp") type("image/webp") 1x, url("../../images/catalog/tablet/catalog-background-tablet@2x.webp") type("image/webp") 2x, url("../../images/catalog/tablet/catalog-background-tablet@1x.jpg") type("image/jpeg") 1x, url("../../images/catalog/tablet/catalog-background-tablet@2x.jpg") type("image/jpeg") 2x);
+  }
+
+  @media (min-width: $desktop) {
+    background-image: url("../../images/catalog/desktop/catalog-background-desktop@1x.jpg"), image-set(url("../../images/catalog/desktop/catalog-background-desktop@1x.webp") type("image/webp") 1x, url("../../images/catalog/desktop/catalog-background-desktop@2x.webp") type("image/webp") 2x, url("../../images/catalog/desktop/catalog-background-desktop@1x.jpg") type("image/jpeg") 1x, url("../../images/catalog/desktop/catalog-background-desktop@2x.jpg") type("image/jpeg") 2x);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: rgba($basic-green, 0.85);
+  }
 }

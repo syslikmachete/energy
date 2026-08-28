@@ -1,10 +1,30 @@
 .example {
-  padding-top: 25px;
+  padding: 25px 0 40px;
   background-color: $special-grey-2;
 
   @media (min-width: $tablet) {
-    padding: 0;
-    background-color: $white;
+    padding: 45px 0 100px;
+    border-top: 1px solid $whisper;
+    background-image:
+      linear-gradient(to bottom,
+      $white 0 619px,
+      $special-grey-2 619px 100%);
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0 0 75px;
+    border: none;
+    background-image:
+      linear-gradient(to bottom,
+      $white 0 146px,
+      $special-grey-2 146px 100%);
+  }
+
+  &__main-wrapper {
+    @media (min-width: $desktop) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__wrapper {
@@ -17,15 +37,36 @@
     margin: 0 0 40px;
 
     @media (min-width: $tablet) {
-      margin: 0 0 60px;
+      margin-bottom: 60px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 146px;
     }
   }
 
   &__description {
-    margin-bottom: 20px;
+    margin: 0 0 20px;
 
     @media (min-width: $tablet) {
       margin-bottom: 55px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 69px;
+    }
+  }
+
+  &__result {
+    @media (min-width: $tablet) {
+      display: flex;
+      margin-bottom: 100px;
+    }
+
+    @media (min-width: $desktop) {
+      flex-direction: column;
+      gap: 60px;
+      margin-bottom: 0;
     }
   }
 
@@ -34,58 +75,49 @@
     @include text-center;
     @include text-uppercase;
     @include text-size(14px, 20px);
-    margin: 0;
+    margin: 0 0 20px;
     color: $black;
 
     @media (min-width: $tablet) {
+      @include text-size(20px, 20px);
       margin: 0 0 0 auto;
+      padding: 19px 0;
+      max-width: 174px;
+      text-align: right;
     }
 
     @media (min-width: $desktop) {
       margin: 0;
+      padding: 0;
+      max-width: max-content;
     }
   }
 
-  &__comparison {
-    display: grid;
-    position: relative;
-    width: 280px;
-    height: 256px;
-
-    @media (min-width: $tablet) {
-      width: 560px;
-      height: 512px;
+  &__cost-value {
+    @media (min-width: $desktop) {
+      padding-left: 63px;
     }
-
-    picture {
-      grid-area: 1 / 1;
-
-      &:first-child {
-        z-index: 1;
-      }
-
-      &:nth-child(2) {
-        z-index: 2;
-        overflow: hidden;
-      }
-    }
-  }
-
-  &__image {
-    display: block;
-    max-width: none;
-    height: 100%;
   }
 
   &__metrics {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-around;
     gap: 32px;
-    align-items: center;
     margin-bottom: 20px;
 
     @media (min-width: $desktop) {
-      justify-content: start;
+      justify-content: flex-start;
+      gap: 42px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__metric {
+    width: 124px;
+    text-align: center;
+
+    @media (min-width: $tablet) {
+      width: 162px;
     }
   }
 
@@ -94,20 +126,135 @@
     @include text-center;
     @include text-size(24px, 24px);
     margin: 0;
+    padding: 15px 0;
+    border: 1px solid $special-grey;
+    border-radius: 3px;
     color: $black;
+
+    @media (min-width: $tablet) {
+      @include text-size(30px, 37px);
+      padding: 19px 0;
+    }
   }
 
   &__metric-label {
     @include font-lato;
     @include text-center;
     @include text-size(12px, 12px);
-    margin: 0;
+    display: inline-block;
+    margin: -8px;
+    padding: 0 15px;
+    max-width: min-content;
+    background-color: $special-grey-2;
     color: $dark-grey;
+
+    @media (min-width: $tablet) {
+      display: block;
+
+      @include text-size(14px, 14px);
+      margin: -8px auto;
+      padding: 0 9px;
+      max-width: max-content;
+      background-color: $white;
+    }
+
+    @media (min-width: $desktop) {
+      background-color: $special-grey-2;
+    }
+  }
+
+  &__comparison {
+    --comparison-position: 50%;
+    position: relative;
+    display: grid;
+    width: 280px;
+    height: 256px;
+    margin: 0 auto;
+    touch-action: none;
+
+    @media (min-width: $tablet) {
+      width: 560px;
+      height: 512px;
+    }
+
+    @media (min-width: $desktop) {
+      margin: 0;
+    }
+
+    picture {
+      grid-area: 1 / 1;
+
+      &:first-child {
+        z-index: 1;
+        clip-path: inset(0 calc(100% - var(--comparison-position)) 0 0);
+      }
+
+      &:nth-child(2) {
+        z-index: 2;
+        clip-path: inset(0 0 0 var(--comparison-position));
+      }
+    }
   }
 
   &__slider {
-    grid-area: 1 / 1;
+    position: absolute;
+    top: 50%;
+    left: var(--comparison-position);
     z-index: 3;
-    place-self: center;
+    width: 0;
+    height: 100%;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    touch-action: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      z-index: -1;
+      width: 4px;
+      height: 100%;
+      background-color: $special-grey-3;
+      border-radius: 2px;
+      transform: translate(-50%, -50%);
+      transition: background-color 0.2s ease;
+    }
+
+    &:hover {
+      &::before {
+        background-color: $basic-green;
+      }
+
+      .example__button-slider {
+        color: $basic-green;
+      }
+    }
+
+    &:active {
+      opacity: 0.6;
+
+      &::before {
+        background-color: $basic-green;
+      }
+
+      .example__button-slider {
+        color: $basic-green-2;
+      }
+    }
+  }
+
+  &__button-slider {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    color: $special-grey-3;
+    transform: translate(-50%, -50%);
+    transition: color 0.2s ease;
   }
 }

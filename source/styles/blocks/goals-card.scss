@@ -1,135 +1,157 @@
 .goals-card {
   position: relative;
+  width: 100%;
   padding: 30px 33px 22px 20px;
-  width: 280px;
   background-color: $basic-grey;
 
   @media (min-width: $tablet) {
     padding: 77px 0 53px 52px;
-    width: 708px;
   }
 
   @media (min-width: $desktop) {
     max-width: 570px;
-  }
-
-  &--slim {
-    &::before {
-      left: 20px;
-      position: absolute;
-      top: 21px;
-      height: 53px;
-      width: 50px;
-      background-image: url("../../icons/stack.svg#cat");
-      content: "";
-    }
-  }
-
-  &--pro {
-    &::before {
-      left: 13px;
-      position: absolute;
-      top: 24px;
-      height: 50px;
-      width: 67px;
-      background-image: url("../../icons/stack.svg#puma");
-      content: "";
-    }
-  }
-
-  &__title {
-    @include font-oswald;
-    @include text-uppercase;
-    @include text-size(24px, 37px);
-    margin: 0 0 29px;
-    padding-left: 70px;
-    color: $black;
-
-    @media (min-width: $tablet) {
-      @include text-size(36px, 36px);
-      margin-bottom: 24px;
-      max-width: 340px;
-      padding: 0;
-    }
-  }
-
-  &__description {
-    @include font-lato;
-    margin: 0 0 38px;
-
-    @media (min-width: $tablet) {
-      @include text-size(16px, 24px);
-      margin-bottom: 48px;
-      max-width: 340px;
-      color: $black;
-    }
-  }
-
-  &__link {
-    @include font-oswald;
-    @include text-center;
-    @include text-uppercase;
-    @include text-size(16px, 16px);
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    gap: 15px;
-    color: $black;
-
-    @media (min-width: $tablet) {
-      gap: 25px;
-      font-size: 20px;
-    }
-
-    &::before {
-      position: absolute;
-      top: -19px;
-      border: 1px solid #d9d9d9;
-      height: 0;
-      width: 240px;
-      content: "";
-    }
+    padding: 77px 61px 55px 52px;
   }
 }
 
-@media (min-width: $tablet) {
-  .goals-card--slim::before {
-    left: 445px;
+.goals-card--slim::before,
+.goals-card--pro::before {
+  content: "";
+  position: absolute;
+}
+
+.goals-card--slim::before {
+  top: 21px;
+  left: 20px;
+  width: 50px;
+  height: 53px;
+  background-image: url("../../icons/stack.svg#cat");
+
+  @media (min-width: $tablet) {
     top: 81px;
-    height: 211px;
+    left: auto;
+    right: 63px;
     width: 200px;
+    height: 211px;
   }
-}
 
-@media (min-width: $desktop) {
-  .goals-card--slim::before {
-    left: 52px;
+  @media (min-width: $desktop) {
     top: 41px;
+    left: 52px;
     width: 100px;
     height: 106px;
   }
 }
 
-@media (min-width: $tablet) {
-  .goals-card--pro::before {
-    left: 411px;
-    top: 91px;
-    height: 200px;
-    width: 268px;
-  }
-}
+.goals-card--pro::before {
+  top: 24px;
+  left: 13px;
+  width: 67px;
+  height: 50px;
+  background-image: url("../../icons/stack.svg#puma");
 
-@media (min-width: $desktop) {
-  .goals-card--pro::before {
-    left: 33px;
+  @media (min-width: $tablet) {
+    top: 91px;
+    left: auto;
+    right: 29px;
+    width: 268px;
+    height: 200px;
+  }
+
+  @media (min-width: $desktop) {
     top: 47px;
+    left: 33px;
     width: 134px;
     height: 100px;
   }
 }
 
-@media (min-width: $tablet) {
-  .goals-card__link::before {
+.goals-card__title {
+  @include font-oswald;
+  @include text-uppercase;
+  @include text-size(24px, 37px);
+  margin: 0 0 29px;
+  padding-left: 70px;
+  color: $black;
+
+  @media (min-width: $tablet) {
+    @include text-size(36px, 36px);
+    max-width: 340px;
+    margin-bottom: 24px;
+    padding-left: 0;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: max-content;
+    margin-bottom: 73px;
+    padding-left: 158px;
+  }
+}
+
+.goals-card__description {
+  @include font-lato;
+  margin: 0 0 38px;
+
+  @media (min-width: $tablet) {
+    @include text-size(16px, 24px);
+    max-width: 340px;
+    margin-bottom: 48px;
+    color: $black;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: max-content;
+    margin-bottom: 23px;
+  }
+}
+
+.goals-card__link {
+  @include font-oswald;
+  @include text-center;
+  @include text-uppercase;
+  @include text-size(16px, 16px);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  color: $black;
+  transition: 0.2s ease;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet) {
+    @include text-size(20px, 20px);
+    gap: 25px;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 38px;
+  }
+}
+
+.goals-card__link::before {
+  content: "";
+  position: absolute;
+  top: -19px;
+  width: 100%;
+  height: 0;
+  border-top: 1px solid $medium-grey;
+
+  @media (min-width: $tablet) {
     display: none;
   }
+}
+
+.goals-card__arrow {
+  flex-shrink: 0;
+  transform-origin: left center;
+  transition: transform 0.3s ease;
+}
+
+.goals-card__link:hover .goals-card__arrow,
+.goals-card__link:focus-visible .goals-card__arrow {
+  transform: scaleX(1.33);
 }

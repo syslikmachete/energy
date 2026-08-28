@@ -1,13 +1,32 @@
 .footer {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  gap: 20px;
   padding: 40px 20px;
   background-color: $basic-grey;
 
-  &__logo-image {
-    display: flex;
-    align-items: center;
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 55px 30px;
+    gap: 0;
   }
+
+  @media (min-width: $desktop) {
+    padding: 66px 110px;
+  }
+}
+
+.footer__logo-image {
+  transition: 0.2s ease;
+}
+
+.footer__logo-image:hover,
+.footer__logo-image:focus {
+  opacity: 0.8;
+}
+
+.footer__logo-image:active {
+  opacity: 0.6;
 }

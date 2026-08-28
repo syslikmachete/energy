@@ -4,7 +4,16 @@
   @include text-uppercase;
   @include text-size(16px, 20px);
   border: none;
+  max-width: 100%;
+  min-height: 40px;
+  padding: 10px 0;
   background-color: $basic-green;
   color: $white;
   cursor: pointer;
+  transition: 0.2s ease;
+
+  @media (max-width: ($tablet - 1px)) {
+    min-width: auto;
+    width: 100%;
+  }
 }

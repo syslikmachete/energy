@@ -1,10 +1,32 @@
 .catalog-card {
+  border-top: 1px solid $special-grey-2;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 20px 20px 24px;
+
+  @media (min-width: $tablet) {
+    border-top: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px 37px 40px;
+  }
+
   &__title {
     @include font-oswald;
     @include text-size(16px, 20px);
     @include text-uppercase;
-    margin: 0;
+    text-align: left;
+    margin: 0 0 14px;
+    width: 57%;
     color: $dark-grey-2;
+
+    @media (min-width: $tablet) {
+      @include text-size(20px, 24px);
+      @include text-center;
+      width: 100%;
+      max-width: 135px;
+      margin: 0 auto 20px;
+    }
   }
 
   &__params {
@@ -12,5 +34,57 @@
     @include text-center;
     @include text-size(12px, 16px);
     color: $dark-grey;
+    min-width: 140px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (min-width: $tablet) {
+      @include text-size(16px, 20px);
+      min-width: 250px;
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: $desktop) {
+      min-width: 169px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (min-width: $tablet) {
+      border-bottom: 1px solid $special-grey;
+      padding: 5px 0;
+    }
+  }
+
+  &__content {
+    border-bottom: 1px solid $special-grey-2;
+  }
+
+  &__button {
+    width: 100%;
+
+    &:hover {
+      background-color: $basic-green-2;
+    }
+
+    &:active {
+      color: rgba($white, 0.3);
+    }
+
+    @media (min-width: $tablet) {
+      max-width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (min-width: $desktop) {
+      max-width: 169px;
+    }
   }
 }

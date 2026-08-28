@@ -1,7 +1,36 @@
 .catalog-title {
+  position: relative;
+
   @include font-oswald;
   @include text-size(24px, 24px);
-  @include text-center;
+  display: flex;
+  align-items: center;
+  gap: 40px;
   margin: 0;
   color: $black;
+
+  &::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    margin-right: -20px;
+    background-color: $basic-green;
+  }
+
+  @media (min-width: $tablet) {
+    @include text-size(32px, 32px);
+    z-index: 1;
+    width: fit-content;
+    padding: 0 40px;
+    background-color: $white;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    @include text-size(40px, 40px);
+    margin-left: -40px;
+  }
 }

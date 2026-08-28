@@ -1,3 +1,100 @@
 .additional {
-  color: inherit;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 1em 0 auto;
+    width: auto;
+    height: 2px;
+    background-color: $basic-green;
+    transform: translateY(-50%);
+  }
+
+  &__title {
+    margin-bottom: 36px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 80px;
+    }
+  }
+
+  @media (max-width: ($tablet - 1px)) {
+    &::after {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    @media (min-width: $desktop) {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 96px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 40px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 70px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    padding: 13px 0 19px;
+    border-bottom: 1px solid $special-grey;
+
+    @media (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 26px 38px 28px;
+      gap: 22px;
+    }
+
+    @media (min-width: $desktop) {
+      padding: 15px 0 17px;
+      min-width: 896px;
+      flex-wrap: nowrap;
+    }
+
+    &:first-child {
+      border-top: 1px solid $special-grey;
+    }
+  }
+
+  &__gift {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-image: url("../../images/catalog/mobile/catalog-background-mobile@1x.jpg"), image-set(url("../../images/catalog/mobile/catalog-background-mobile@1x.webp") type("image/webp") 1x, url("../../images/catalog/mobile/catalog-background-mobile@2x.webp") type("image/webp") 2x, url("../../images/catalog/mobile/catalog-background-mobile@1x.jpg") type("image/jpeg") 1x, url("../../images/catalog/mobile/catalog-background-mobile@2x.jpg") type("image/jpeg") 2x);
+
+    @media (min-width: $tablet) {
+      margin-bottom: 80px;
+      background-image: url("../../images/catalog/tablet/catalog-background-tablet@1x.jpg"), image-set(url("../../images/catalog/tablet/catalog-background-tablet@1x.webp") type("image/webp") 1x, url("../../images/catalog/tablet/catalog-background-tablet@2x.webp") type("image/webp") 2x, url("../../images/catalog/tablet/catalog-background-tablet@1x.jpg") type("image/jpeg") 1x, url("../../images/catalog/tablet/catalog-background-tablet@2x.jpg") type("image/jpeg") 2x);
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 0;
+      width: 245px;
+      background-image: url("../../images/catalog/desktop/catalog-background-desktop@1x.jpg"), image-set(url("../../images/catalog/desktop/catalog-background-desktop@1x.webp") type("image/webp") 1x, url("../../images/catalog/desktop/catalog-background-desktop@2x.webp") type("image/webp") 2x, url("../../images/catalog/desktop/catalog-background-desktop@1x.jpg") type("image/jpeg") 1x, url("../../images/catalog/desktop/catalog-background-desktop@2x.jpg") type("image/jpeg") 2x);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background-color: rgba($basic-green, 0.85);
+    }
+  }
 }

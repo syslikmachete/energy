@@ -1,0 +1,25 @@
+.page__header {
+  margin-bottom: 27px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 74px;
+  }
+}
+
+.page__header--index {
+  @media (min-width: $tablet) {
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 110px;
+  }
+}
+
+.page__catalog {
+  margin-bottom: 25px;
+}

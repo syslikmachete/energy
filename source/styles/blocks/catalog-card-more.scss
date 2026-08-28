@@ -1,27 +1,102 @@
 .catalog-card-more {
-  &__title {
-    @include font-oswald;
-    @include text-center;
-    @include text-size(16px, 20px);
-    @include text-uppercase;
-    margin: 0;
-    color: $charcoal;
+  border-top: 1px solid $special-grey-2;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 20px 20px 0;
+
+  @media (min-width: $tablet) {
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 40px;
+  }
+}
+
+.catalog-card-more__wrapper {
+  position: relative;
+  padding-top: 58px;
+}
+
+.catalog-card-more__wrapper::before,
+.catalog-card-more__wrapper::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  border: 1px solid $lightgrey;
+  width: 30px;
+  height: 0;
+}
+
+.catalog-card-more__wrapper::before {
+  transform: translateX(-50%) rotate(-90deg);
+}
+
+.catalog-card-more__wrapper::after {
+  transform: translateX(-50%);
+}
+
+@media (min-width: $tablet) {
+  .catalog-card-more__wrapper {
+    max-width: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 108px;
   }
 
-  &__description {
-    @include font-lato;
-    @include text-center;
-    @include text-size(12px, 16px);
-    margin: 0;
-    color: $dark-grey;
+  .catalog-card-more__wrapper::before,
+  .catalog-card-more__wrapper::after {
+    width: 60px;
+  }
+}
+
+.catalog-card-more__title {
+  @include font-oswald;
+  @include text-center;
+  @include text-size(16px, 20px);
+  @include text-uppercase;
+  margin: 0;
+  margin-bottom: 8px;
+  color: $charcoal;
+
+  @media (min-width: $tablet) {
+    @include text-size(20px, 24px);
+    margin-bottom: 23px;
+  }
+}
+
+.catalog-card-more__description {
+  @include font-lato;
+  @include text-center;
+  @include text-size(12px, 16px);
+  margin: 0;
+  margin-bottom: 21px;
+  color: $dark-grey;
+
+  @media (min-width: $tablet) {
+    @include text-size(16px, 18px);
+  }
+}
+
+.catalog-card-more__link {
+  display: inline-block;
+  background-color: $basic-grey;
+  color: $dark-grey;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:hover {
+    background-color: $special-grey-2;
   }
 
-  &__link {
-    @include font-oswald;
-    @include text-center;
-    @include text-size(16px, 20px);
-    @include text-uppercase;
-    background-color: #f2f2f2;
-    color: $dark-grey;
+  &:active {
+    background-color: $special-grey;
+  }
+
+  @media (min-width: $tablet) {
+    min-width: 250px;
+  }
+
+  @media (min-width: $desktop) {
+    min-width: 169px;
   }
 }
